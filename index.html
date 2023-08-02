@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            width: 90%;
+            /* height: 100px; */
+            background-color: bisque;
+            border-radius: 50px;
+            margin: 0 auto;
+            /* position: static; */
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+
+        footer{
+            width: 90%;
+            /* height: 100px; */
+            background-color: bisque;
+            border-radius: 50px;
+            margin: 0 auto;
+            
+        }
+
+        nav{
+            padding: 20px;
+            color: blue;
+               }
+        
+               ul{
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+               }
+
+               a{
+                color: inherit;
+                text-decoration: none;
+                padding: 10px
+               }
+
+               ul.submenu{
+                display: none;
+                background-color: aqua;
+                padding: 5px;
+
+                /* gap: 10px; */
+                position: absolute;
+                text-align: center;
+                /* height: 50px; */
+               }
+
+               ul.submenu li:hover{
+                background-color: burlywood;
+               }
+
+               ul > .menu:hover ul.submenu{
+            display: block;
+            margin-left: 60px;
+        }
+        section p{
+            width:80%;
+        }
+
+    
+           
+
+     section{
+        border: 2px solid red;
+        margin: 30px auto;
+        width: 80%;
+        min-height:50vh;
+
+        display: flex;
+        /* flex-direction: row-reverse; */
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+
+     }
+      section div{
+        width:40%;
+        min-height:300px;
+        /* height:300px; */
+        /* border:1px solid red; */
+        position: relative; 
+     } 
+     img{
+        position: absolute  ;
+        width:100%;
+        height:100%;
+        z-index: -1;             
+                                                /* z-index i am adding here for image goes below navbar */
+     } 
+
+     section p{
+        width:50%;
+     }
+
+
+@media (min-width:300px) and (max-width:780px){
+    section{
+        flex-direction: column;
+
+
+    }
+
+    section p{
+        width:80%;
+     }
+} 
+
+
+    
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li class="menu"><a href="#">Contact</a>
+                    <ul class="submenu">
+                        <li><a href="#">kashi</a></li>
+                        <li><a href="#">Vrindavan</a></li>
+                        <li><a href="#">Ayoudhya</a></li>
+
+                    </ul>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+
+    
+
+    <main>
+        <section>
+            <div>
+                <img src="kasi.jpg" >
+            </div>
+            <p>The vanaras after the war decided to stay back in lanka and sought permission from rama to do so. They also told him that they would be marrying the folk from lanka (rakshasa clan). They finally did and their population began to increase.</p>
+        
+        </section>
+        <section>
+            <div>
+                <img src="vrindavan.jpeg" >
+            </div>
+            <p>The holy town of Vrindavan, near Mathura is an important pilgrimage hub in Braj region that attracts an estimated 5,00,000 pilgrims every year. This is the place where Lord Krishna is believed to have spent his childhood. The name of Vrindavan comes from words 'vrinda', which means basil, and 'van' meaning forest.</p>
+        </section>
+        <section>
+            <div>
+                <img src="ayodhya.jpg">
+            </div>
+            <p>An ancient town, Ayodhya is regarded as one of the seven sacred cities of the Hindus, revered because of its association in the great Indian epic poem Ramayana with the birth of Rama and with the rule of his father, Dasharatha.</p>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li class="menu"><a href="#">Contact</a>
+                    <ul class="submenu">
+                        <li><a href="#">kashi</a></li>
+                        <li><a href="#">Vrindavan</a></li>
+                        <li><a href="#">Ayoudhya</a></li>
+
+                    </ul>
+                    </li>
+                </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
